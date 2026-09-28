@@ -1,0 +1,24 @@
+{
+  "name": "retempo",
+  "private": true,
+  "type": "module",
+  "license": "CC0-1.0",
+  "scripts": {
+    "dev": "node scripts/prepare-workers.mjs && vite --host 0.0.0.0",
+    "build": "node scripts/prepare-workers.mjs && tsc --noEmit && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@mediabunny/aac-encoder": "^1.60.0",
+    "gifenc": "1.0.3",
+    "mediabunny": "1.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.15",
+    "esbuild": "^0.27.3",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
+  }
+}
